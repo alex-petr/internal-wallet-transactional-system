@@ -5,3 +5,9 @@ require:
 AllCops:
   NewCops: enable
   DisplayStyleGuide: true
+
+Style/Documentation:
+  Enabled: false
+
+Rails/FilePath:
+  EnforcedStyle: arguments
