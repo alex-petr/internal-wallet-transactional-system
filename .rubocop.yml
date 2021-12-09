@@ -11,3 +11,7 @@ Style/Documentation:
 
 Rails/FilePath:
   EnforcedStyle: arguments
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
