@@ -3,54 +3,25 @@
 RSpec.describe User, type: :model do
   describe 'registration' do
     context 'with personal user' do
-      subject(:user) do
-        # TODO: Create FactoryBot traits for each user role
-        described_class.new(email: 'heralt.of.rivia@kaermorhen.org',
-                            password: 'th3_w1tch3r',
-                            confirmed_at: Time.zone.now)
-      end
+      # TODO: Add shoulda-matchers
+      subject(:user) { build(:user, :with_person_role) }
 
-      it 'is expected to create a valid user' do
-        expect(user).to be_valid
-      end
-
-      it 'is expected to be a person' do
-        expect(user).to be_person
-      end
+      it('is expected to create a valid user') { expect(user).to be_valid }
+      it('is expected to be a person') { expect(user).to be_person }
     end
 
     context 'with team user' do
-      subject(:team) do
-        described_class.new(role: :team,
-                            email: 'witchers@kaermorhen.org',
-                            password: 'th3_w1tch3r5',
-                            confirmed_at: Time.zone.now)
-      end
+      subject(:team) { build(:user, :with_team_role) }
 
-      it 'is expected to create a valid user' do
-        expect(team).to be_valid
-      end
-
-      it 'is expected to be a team' do
-        expect(team).to be_team
-      end
+      it('is expected to create a valid user') { expect(team).to be_valid }
+      it('is expected to be a team') { expect(team).to be_team }
     end
 
     context 'with stock user' do
-      subject(:stock) do
-        described_class.new(role: :stock,
-                            email: 'witchers.fundraising@kaermorhen.org',
-                            password: 'th3_w1tch3r5_st0ck',
-                            confirmed_at: Time.zone.now)
-      end
+      subject(:stock) { build(:user, :with_stock_role) }
 
-      it 'is expected to create a valid user' do
-        expect(stock).to be_valid
-      end
-
-      it 'is expected to be a stock' do
-        expect(stock).to be_stock
-      end
+      it('is expected to create a valid user') { expect(stock).to be_valid }
+      it('is expected to be a stock') { expect(stock).to be_stock }
     end
   end
 end

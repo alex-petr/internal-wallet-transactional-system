@@ -66,7 +66,12 @@ money and transferring to whom? (Credits == source wallet == nil, Debits == targ
   - [RSpec](https://rspec.info/) - testing tool for TDD/BDD
   - [rspec-rails](https://github.com/rspec/rspec-rails) - RSpec testing framework for Ruby on Rails
   - [Fuubar](https://github.com/thekompanee/fuubar) - instafailing RSpec formatter that uses a progress bar instead of a string of letters and dots as feedback.
-  - [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) for factories
+  - [factory_bot](https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md), [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) - fixtures replacement with a straightforward definition
+    syntax, support for multiple build strategies (saved instances, unsaved
+    instances, attribute hashes, and stubbed objects), and support for multiple
+    factories for the same class (`user`, `admin_user`, and so on), including factory
+    inheritance + provides Rails integration.
+  - [Faker](https://github.com/faker-ruby/faker) - A library for generating fake data such as names, addresses, and phone numbers.
 - Code style is provided via [RuboCop](https://github.com/rubocop/rubocop)
 - **TODO: add more**
 
