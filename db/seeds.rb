@@ -7,10 +7,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.transaction do
-  User.create!(email: 'heralt.of.rivia@kaermorhen.org', password: 'th3_w1tch3r', confirmed_at: Time.zone.now)
+
+def log_display_status(message)
+  Rails.logger.info message.ai
+  ap message # rubocop:disable Rails/Output
 end
 
-# TODO: Add Person user
-# TODO: Add Team user
-# TODO: Add Stock user
+def create_user!(attributes)
+  User.transaction do
+    user = User.create!(attributes)
+    log_display_status(message: 'User successfully created', attributes: attributes, record: user)
+  end
+rescue ActiveRecord::RecordInvalid => e
+  log_display_status(message: 'User not created!', attributes: attributes, error: e, record: e.record)
+end
+
+create_user!(FactoryBot.attributes_for(:user, :with_person_role))
+create_user!(FactoryBot.attributes_for(:user, :with_team_role))
+create_user!(FactoryBot.attributes_for(:user, :with_stock_role))

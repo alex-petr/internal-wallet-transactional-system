@@ -73,6 +73,7 @@ money and transferring to whom? (Credits == source wallet == nil, Debits == targ
     inheritance + provides Rails integration.
   - [Faker](https://github.com/faker-ruby/faker) - A library for generating fake data such as names, addresses, and phone numbers.
   - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) - Simple one-liner tests for common Rails functionality.
+- Debug: [Awesome Print](https://github.com/awesome-print/awesome_print) - Pretty print your Ruby objects with style -- in full color and with proper indentation
 - Code style is provided via [RuboCop](https://github.com/rubocop/rubocop)
 - **TODO: add more**
 
