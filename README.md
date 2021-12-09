@@ -72,6 +72,7 @@ money and transferring to whom? (Credits == source wallet == nil, Debits == targ
     factories for the same class (`user`, `admin_user`, and so on), including factory
     inheritance + provides Rails integration.
   - [Faker](https://github.com/faker-ruby/faker) - A library for generating fake data such as names, addresses, and phone numbers.
+  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers) - Simple one-liner tests for common Rails functionality.
 - Code style is provided via [RuboCop](https://github.com/rubocop/rubocop)
 - **TODO: add more**
 
