@@ -75,7 +75,7 @@ RSpec.configure do |config|
   #   # unless a formatter has already been configured
   #   # (e.g. via a command-line flag).
   config.default_formatter = config.files_to_run.one? ? 'doc' : 'Fuubar'
-  #
+
   #   # Print the 10 slowest examples and example groups at the
   #   # end of the spec run, to help surface which specs are running
   #   # particularly slow.
@@ -85,8 +85,8 @@ RSpec.configure do |config|
   #   # order dependency and want to debug it, you can fix the order by providing
   #   # the seed, which is printed after each run.
   #   #     --seed 1234
-  #   config.order = :random
-  #
+  config.order = :random
+
   #   # Seed global randomization in this process using the `--seed` CLI option.
   #   # Setting this allows you to use `--seed` to deterministically reproduce
   #   # test failures related to randomization by passing the same `--seed` value
