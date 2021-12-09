@@ -62,7 +62,11 @@ money and transferring to whom? (Credits == source wallet == nil, Debits == targ
 - All required gems installed with [Bundler gem manager](https://bundler.io/)
 - [Devise](https://github.com/heartcombo/devise) - Flexible authentication solution for Rails with Warden. 
 - [Letter Opener](https://github.com/ryanb/letter_opener) - Preview mail in the browser instead of sending.
-- Testing: [RSpec](https://rspec.info/) / [rspec-rails](https://github.com/rspec/rspec-rails) / [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) for factories
+- Testing: 
+  - [RSpec](https://rspec.info/) - testing tool for TDD/BDD
+  - [rspec-rails](https://github.com/rspec/rspec-rails) - RSpec testing framework for Ruby on Rails
+  - [Fuubar](https://github.com/thekompanee/fuubar) - instafailing RSpec formatter that uses a progress bar instead of a string of letters and dots as feedback.
+  - [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) for factories
 - Code style is provided via [RuboCop](https://github.com/rubocop/rubocop)
 - **TODO: add more**
 
