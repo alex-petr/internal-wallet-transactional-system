@@ -60,6 +60,8 @@ money and transferring to whom? (Credits == source wallet == nil, Debits == targ
 - [Puma](https://github.com/puma/puma) as simple, fast, multi-threaded server for Ruby/Rack applications
 - [Rake](https://github.com/ruby/rake) – Ruby Make, make-like build utility for Ruby
 - All required gems installed with [Bundler gem manager](https://bundler.io/)
+- [Devise](https://github.com/heartcombo/devise) - Flexible authentication solution for Rails with Warden. 
+- [Letter Opener](https://github.com/ryanb/letter_opener) - Preview mail in the browser instead of sending.
 - Testing: [RSpec](https://rspec.info/) / [rspec-rails](https://github.com/rspec/rspec-rails) / [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) for factories
 - Code style is provided via [RuboCop](https://github.com/rubocop/rubocop)
 - **TODO: add more**
@@ -115,7 +117,18 @@ $ gem install bundler && bundle
 ```bash
 $ yarn install
 ```
- 
+
+### Run all pending migrations
+
+```bash
+$ rails db:migrate && rails db:migrate RAILS_ENV=test
+```
+
+### Create seed data from db/seeds.rb
+
+```bash
+$ rails db:seed
+```
 
 ### TODO: add NVM/NPM/NodeJS
 ### TODO: add database setup (create/add seeds data)
