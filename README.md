@@ -180,9 +180,9 @@ $ rspec spec/services/some_service_spec.rb
 ```
 
 ## TODOs for further improvement
-- [ ] Setup random tests run order
+- [ ] Migrate to MySQL or PostgreSQL
 - [ ] Add Brakeman, RubyCritic
-- [ ] Add annotate, dotenv-rails, awesome_print, pry-byebug
+- [ ] Add annotate, dotenv-rails, pry-byebug
 - [ ] Improve Readme
 - [ ] Move transaction operations to Sidekiq background workers
 - [ ] Add CI (Drone.io, Circle CI etc): RuboCop, RSpec, Brakeman
